@@ -1,321 +1,300 @@
-# Creda Pay
+<p align="center">
+  <img src="public/creda-logo.svg" alt="Creda Pay" width="80" height="80" />
+</p>
 
-## Open Trust Layer for Digital Payments
+<h1 align="center">Creda Pay</h1>
 
-Creda Pay is an open protocol that introduces identity, credibility, and trust into digital payments.
+<p align="center">
+  <strong>Open Trust Layer for Digital Payments on Stellar</strong>
+</p>
 
-Today, digital transactions are fast and borderless — but fundamentally blind.
+<p align="center">
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#project-structure">Project Structure</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#license">License</a>
+</p>
 
-Participants interact through anonymous wallet addresses with no native way to understand:
-
-- Who they are paying  
-- Whether the counterparty is reliable  
-- Whether agreements have been honored  
-- Whether an organization is legitimate  
-
-Creda Pay transforms payment identities into trust-bearing financial profiles.
-
-It enables individuals, businesses, and communities to build portable financial reputation based on real activity rather than institutional permission.
-
----
-
-# Why Creda Pay Exists
-
-Digital finance solved value transfer.
-
-It did not solve trust.
-
-In traditional finance, trust is built through:
-
-- Transaction history  
-- Institutional verification  
-- Long-term relationships  
-
-In digital systems, this layer is missing.
-
-Payments today are identity-agnostic and reputationless.
-
-Creda Pay introduces a programmable trust layer that allows financial credibility to emerge from participation.
+<p align="center">
+  <img src="https://img.shields.io/badge/Stellar-Soroban-blue?logo=stellar" alt="Stellar" />
+  <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5-blue?logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" />
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen" alt="PRs Welcome" />
+</p>
 
 ---
 
-# What Creda Pay Does
+## 🌍 Overview
 
-Creda Pay converts a wallet into a financial identity.
+Creda Pay is an open protocol that introduces **identity, credibility, and trust** into digital payments on the [Stellar](https://stellar.org) network.
 
-Instead of interacting with anonymous addresses:
+Today, digital transactions are fast and borderless — but fundamentally blind. Participants interact through anonymous wallet addresses with no native way to understand who they are paying, whether the counterparty is reliable, or whether agreements have been honored.
 
-0xF82A...91C
+**Creda Pay transforms payment identities into trust-bearing financial profiles**, enabling individuals, businesses, and communities to build portable financial reputation based on real activity — not institutional permission.
 
-Participants interact with identity-backed payment profiles.
+### Key Features
 
-Each identity can include:
-
-- Human-readable name  
-- Trust score  
-- Verification status  
-- Financial relationships  
-- Endorsements  
-
-Over time, identity becomes credibility.
+- 🔗 **Identity Registry** — Map human-readable names to Stellar wallets
+- 📊 **Trust Engine** — Activity-based reputation scoring
+- ✅ **Verification System** — Optional identity validation (email, org, community)
+- 🌐 **Financial Graph** — Relationship network across identities
+- 👤 **Public Profiles** — Trust signals, activity history, endorsements & badges
+- 🔌 **Wallet Integration** — Freighter wallet connect with Soroban support
 
 ---
 
-# Core Principles
+## 🚀 Getting Started
 
-Creda Pay is built on four guiding principles:
+### Prerequisites
 
-### Open Participation
-No permission required to create an identity.
+- **Node.js** >= 18.0.0
+- **npm** >= 9.0.0
+- **Freighter Wallet** browser extension ([install](https://freighter.app))
+- **Git** for version control
 
-### Activity-Based Reputation
-Trust emerges from behavior, not status.
+### Installation
 
-### User Ownership
-Identity is controlled by the wallet owner.
+```bash
+# Clone the repository
+git clone https://github.com/creda-pay/creda-pay_frontend.git
+cd creda-pay_frontend
 
-### Privacy Respect
-Verification is optional and opt-in.
+# Install dependencies
+npm install
 
----
+# Copy environment variables
+cp .env.example .env.local
 
-# System Overview
+# Start development server
+npm run dev
+```
 
-Creda Pay is composed of four major layers:
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-## Identity Layer
-Maps human-readable names to wallet ownership.
+### Environment Variables
 
-## Activity Layer
-Indexes transaction behavior and financial relationships.
+Create a `.env.local` file from `.env.example`:
 
-## Trust Layer
-Computes credibility based on participation patterns.
+| Variable | Description | Default |
+|---|---|---|
+| `NEXT_PUBLIC_STELLAR_NETWORK` | Stellar network (`testnet` or `mainnet`) | `testnet` |
+| `NEXT_PUBLIC_SOROBAN_RPC_URL` | Soroban RPC endpoint | `https://soroban-testnet.stellar.org` |
+| `NEXT_PUBLIC_HORIZON_URL` | Horizon API endpoint | `https://horizon-testnet.stellar.org` |
+| `NEXT_PUBLIC_IDENTITY_CONTRACT_ID` | Identity Registry contract address | — |
+| `NEXT_PUBLIC_TRUST_CONTRACT_ID` | Trust Engine contract address | — |
+| `NEXT_PUBLIC_NETWORK_PASSPHRASE` | Stellar network passphrase | `Test SDF Network ; September 2015` |
 
-## Verification Layer
-Supports optional identity validation and organizational legitimacy.
+### Available Scripts
 
----
-
-# Core Components
-
-## Identity Registry
-
-Enables:
-
-username → wallet
-
-Users can:
-
-- Register identity
-- Transfer ownership
-- Update linked wallet
-
----
-
-## Public Profile
-
-Each identity can evolve into a financial profile containing:
-
-- Trust signals  
-- Activity history  
-- Endorsements  
-- Verification badges  
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server on port 3000 |
+| `npm run build` | Build production bundle |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint checks |
+| `npm run type-check` | Run TypeScript compiler checks |
+| `npm run test` | Run test suite |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run format` | Format code with Prettier |
+| `npm run format:check` | Check code formatting |
 
 ---
 
-## Trust Engine
+## 🏗️ Architecture
 
-Creda Pay computes reputation using:
+Creda Pay frontend follows a **layered architecture** that cleanly separates concerns:
 
-- Payment consistency  
-- Relationship longevity  
-- Participation reliability  
-- Peer endorsements  
+```
+┌─────────────────────────────────────────────┐
+│                   UI Layer                   │
+│         (Pages, Components, Layouts)         │
+├─────────────────────────────────────────────┤
+│                 Hooks Layer                  │
+│    (useWallet, useTrust, useIdentity, etc)   │
+├─────────────────────────────────────────────┤
+│               Context Layer                  │
+│     (WalletContext, IdentityContext, etc)     │
+├─────────────────────────────────────────────┤
+│              Services Layer                  │
+│   (Stellar SDK, Contract calls, API calls)   │
+├─────────────────────────────────────────────┤
+│                 Lib Layer                    │
+│   (Stellar helpers, utils, type definitions) │
+└─────────────────────────────────────────────┘
+```
 
-Trust is derived — not assigned.
+### Core Layers
 
----
-
-## Verification System
-
-Optional mechanisms may include:
-
-- Email linkage  
-- Organizational validation  
-- Community attestations  
-
-Verification enhances trust but is not mandatory.
-
----
-
-## Financial Graph
-
-Creda Pay builds a relationship network across identities.
-
-This enables:
-
-- Reputation discovery  
-- Credibility signals  
-- Risk awareness  
+| Layer | Purpose |
+|---|---|
+| **UI** | Next.js App Router pages, reusable components, layouts |
+| **Hooks** | Custom React hooks for wallet, identity, trust interactions |
+| **Contexts** | React contexts for global state (wallet connection, identity) |
+| **Services** | Business logic — Stellar SDK calls, Soroban contract interactions, API |
+| **Lib** | Pure utility functions, Stellar helpers, constants, type definitions |
 
 ---
 
-# Architecture
+## 📁 Project Structure
 
-Creda Pay consists of three primary operational layers:
-
-## On-Chain Layer
-Handles:
-
-- Identity ownership  
-- Username mapping  
-- Attestation anchors  
-
-## Indexing Layer
-Tracks:
-
-- Payment behavior  
-- Interaction patterns  
-- Network signals  
-
-## Trust Computation Layer
-Processes:
-
-- Activity metrics  
-- Relationship data  
-- Endorsements  
-
----
-
-# High-Level Flow
-
-1. User registers identity  
-2. Identity links to wallet  
-3. Activity is indexed  
-4. Trust score evolves over time  
-5. Profile becomes credible  
-
----
-
-# Repository Structure
-
-creda-pay/
-
-contracts/
-identity-registry/
-
-backend/
-indexer/
-trust-engine/
-verification-service/
-api/
-
-frontend/
-web-app/
-
-docs/
-architecture/
-trust-model/
-governance/
-
----
-
-# Use Cases
-
-Creda Pay enables:
-
-- Freelancer credibility  
-- Merchant trust  
-- Donation transparency  
-- Community finance  
-- DAO participation identity  
-- Microfinance scoring  
-
----
-
-# Integration Potential
-
-External platforms can use Creda Pay to:
-
-- Verify counterparties  
-- Check credibility  
-- Enable identity-based payments  
-- Assess risk  
-
----
-
-# Development Roadmap
-
-## Phase 1 — Identity
-- Username registry  
-- Identity resolution  
-
-## Phase 2 — Trust
-- Transaction indexing  
-- Reputation scoring  
-
-## Phase 3 — Verification
-- Email & organization linkage  
-
-## Phase 4 — Ecosystem
-- SDKs  
-- Developer integrations  
+```
+creda-pay_frontend/
+├── .github/                    # GitHub configuration
+│   ├── ISSUE_TEMPLATE/         # Issue templates (bug, feature, task)
+│   ├── workflows/              # CI/CD GitHub Actions
+│   └── PULL_REQUEST_TEMPLATE.md
+│
+├── public/                     # Static assets
+│   ├── creda-logo.svg          # App logo
+│   └── icons/                  # App icons & favicons
+│
+├── src/
+│   ├── app/                    # Next.js App Router
+│   │   ├── layout.tsx          # Root layout with providers
+│   │   ├── page.tsx            # Landing / home page
+│   │   ├── globals.css         # Global styles & design tokens
+│   │   ├── (auth)/             # Auth-gated route group
+│   │   │   ├── dashboard/      # User dashboard
+│   │   │   ├── profile/        # Identity profile management
+│   │   │   └── settings/       # Account settings
+│   │   ├── explore/            # Public identity explorer
+│   │   └── identity/
+│   │       └── [username]/     # Public profile page
+│   │
+│   ├── components/             # Reusable UI components
+│   │   ├── common/             # Buttons, inputs, modals, cards
+│   │   ├── layout/             # Navbar, footer, sidebar
+│   │   ├── wallet/             # Wallet connect button & status
+│   │   ├── identity/           # Identity cards, registration forms
+│   │   ├── trust/              # Trust score display, badges
+│   │   └── charts/             # Activity graphs, trust visualizations
+│   │
+│   ├── contexts/               # React Context providers
+│   │   ├── WalletContext.tsx    # Stellar wallet state
+│   │   └── IdentityContext.tsx  # User identity state
+│   │
+│   ├── hooks/                  # Custom React hooks
+│   │   ├── useWallet.ts        # Wallet connection & transactions
+│   │   ├── useIdentity.ts      # Identity registry interactions
+│   │   ├── useTrust.ts         # Trust score queries
+│   │   └── useSoroban.ts       # Generic Soroban contract calls
+│   │
+│   ├── services/               # Business logic & API calls
+│   │   ├── stellar.ts          # Stellar SDK wrapper
+│   │   ├── soroban.ts          # Soroban contract interactions
+│   │   ├── identity.ts         # Identity registry service
+│   │   ├── trust.ts            # Trust engine service
+│   │   └── api.ts              # Backend API client
+│   │
+│   ├── lib/                    # Utilities & helpers
+│   │   ├── stellar/            # Stellar-specific utilities
+│   │   │   ├── client.ts       # SorobanClient setup
+│   │   │   ├── network.ts      # Network configuration
+│   │   │   └── utils.ts        # Address formatting, XDR helpers
+│   │   ├── constants.ts        # App-wide constants
+│   │   └── utils.ts            # General utility functions
+│   │
+│   └── types/                  # TypeScript type definitions
+│       ├── identity.ts         # Identity & profile types
+│       ├── trust.ts            # Trust score & badge types
+│       ├── wallet.ts           # Wallet & transaction types
+│       └── index.ts            # Re-exports
+│
+├── docs/                       # Project documentation
+│   ├── ARCHITECTURE.md         # Detailed architecture guide
+│   ├── STELLAR_INTEGRATION.md  # Stellar & Soroban integration guide
+│   └── COMPONENTS.md           # Component documentation
+│
+├── .env.example                # Environment variable template
+├── .prettierrc                 # Prettier configuration
+├── .prettierignore             # Prettier ignore rules
+├── CONTRIBUTING.md             # Contribution guidelines
+├── CODE_OF_CONDUCT.md          # Community code of conduct
+├── CHANGELOG.md                # Version changelog
+├── LICENSE                     # MIT License
+├── next.config.ts              # Next.js configuration
+├── tsconfig.json               # TypeScript configuration
+└── package.json                # Dependencies & scripts
+```
 
 ---
 
-# Privacy Approach
+## 🔗 Stellar Integration
 
-Creda Pay does not require:
+Creda Pay is built on the **Stellar network** using **Soroban smart contracts**.
 
-- KYC  
-- Real-world identity  
+### Wallet Connection
 
-Verification is optional.
+We use [Freighter](https://freighter.app) for wallet connectivity:
 
-Users control disclosure.
+```typescript
+import { useWallet } from '@/hooks/useWallet';
 
----
+function MyComponent() {
+  const { connect, disconnect, publicKey, isConnected } = useWallet();
+  // ...
+}
+```
 
-# Governance Direction
+### Contract Interaction
 
-Long-term, Creda Pay aims to evolve toward:
+Soroban contracts are called through the services layer:
 
-- Transparent trust models  
-- Community participation  
-- Open scoring logic  
+```typescript
+import { identityService } from '@/services/identity';
 
----
+// Register a new identity
+await identityService.register(username, publicKey);
 
-# Contributing
+// Look up an identity
+const profile = await identityService.resolve(username);
+```
 
-We welcome contributors in:
+### Supported Networks
 
-- Protocol design  
-- Trust modeling  
-- Privacy research  
-- Backend engineering  
-- Frontend UX  
-- Developer tooling  
-
-Please see:
-
-CONTRIBUTING.md
-
----
-
-# Long-Term Vision
-
-Creda Pay aims to become the foundational trust layer for digital payments.
-
-A system where credibility is:
-
-- Portable  
-- User-owned  
-- Participation-based  
+| Network | RPC URL | Purpose |
+|---|---|---|
+| **Testnet** | `https://soroban-testnet.stellar.org` | Development & testing |
+| **Mainnet** | `https://soroban.stellar.org` | Production |
 
 ---
 
-# License
+## 🤝 Contributing
 
-Open source under MIT License.
+We love contributions! Creda Pay is an open-source project and we welcome contributors of all experience levels.
+
+### Quick Start for Contributors
+
+1. **Fork** the repository
+2. **Clone** your fork locally
+3. **Create a branch** for your feature (`git checkout -b feat/my-feature`)
+4. **Make changes** and write tests
+5. **Commit** with conventional commits (`feat:`, `fix:`, `docs:`, etc.)
+6. **Push** and open a **Pull Request**
+
+Please read our full [Contributing Guide](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+### Areas We Need Help
+
+| Area | Description |
+|---|---|
+| 🎨 **Frontend UX** | Components, animations, responsive design |
+| 🔗 **Stellar Integration** | Soroban contracts, SDK utilities |
+| 🧪 **Testing** | Unit tests, integration tests, E2E |
+| 📖 **Documentation** | Guides, tutorials, API docs |
+| 🌍 **Internationalization** | Translations & locale support |
+| ♿ **Accessibility** | WCAG compliance, screen reader support |
+
+---
+
+## 📄 License
+
+Creda Pay is open source under the [MIT License](LICENSE).
+
+---
+
+<p align="center">
+  Built with ❤️ on <a href="https://stellar.org">Stellar</a>
+</p>
