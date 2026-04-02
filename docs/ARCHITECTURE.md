@@ -1,10 +1,10 @@
-# Creda Pay Architecture
+# Credy Pay Architecture
 
-This document provides a detailed overview of the technical architecture of the Creda Pay frontend.
+This document provides a detailed overview of the technical architecture of the Credy Pay frontend.
 
 ## 🏗️ High-Level Architecture
 
-Creda Pay is a decentralized application (dApp) built on the Stellar network using Soroban smart contracts. The frontend is built with Next.js 15, focusing on providing a premium user experience while interacting with complex on-chain logic.
+Credy Pay is a decentralized application (dApp) built on the Stellar network using Soroban smart contracts. The frontend is built with Next.js 15, focusing on providing a premium user experience while interacting with complex on-chain logic.
 
 ### Layered Structure
 
@@ -35,7 +35,7 @@ We follow a clean, layered architecture to separate concerns and improve maintai
 
 ## 🔗 Stellar Integration
 
-Creda Pay interacts with the Stellar network through:
+Credy Pay interacts with the Stellar network through:
 -   **Horizon API**: For standard Stellar operations (payments, account history).
 -   **Soroban RPC**: For interacting with smart contracts (Identity, Trust).
 -   **Freighter Wallet**: For secure transaction signing.

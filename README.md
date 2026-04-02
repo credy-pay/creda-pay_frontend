@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="public/creda-logo.svg" alt="Creda Pay" width="80" height="80" />
+  <img src="public/credy-logo.svg" alt="Credy Pay" width="80" height="80" />
 </p>
 
-<h1 align="center">Creda Pay</h1>
+<h1 align="center">Credy Pay</h1>
 
 <p align="center">
   <strong>Open Trust Layer for Digital Payments on Stellar</strong>
@@ -28,11 +28,11 @@
 
 ## 🌍 Overview
 
-Creda Pay is an open protocol that introduces **identity, credibility, and trust** into digital payments on the [Stellar](https://stellar.org) network.
+Credy Pay is an open protocol that introduces **identity, credibility, and trust** into digital payments on the [Stellar](https://stellar.org) network.
 
 Today, digital transactions are fast and borderless — but fundamentally blind. Participants interact through anonymous wallet addresses with no native way to understand who they are paying, whether the counterparty is reliable, or whether agreements have been honored.
 
-**Creda Pay transforms payment identities into trust-bearing financial profiles**, enabling individuals, businesses, and communities to build portable financial reputation based on real activity — not institutional permission.
+**Credy Pay transforms payment identities into trust-bearing financial profiles**, enabling individuals, businesses, and communities to build portable financial reputation based on real activity — not institutional permission.
 
 ### Key Features
 
@@ -58,8 +58,8 @@ Today, digital transactions are fast and borderless — but fundamentally blind.
 
 ```bash
 # Clone the repository
-git clone https://github.com/creda-pay/creda-pay_frontend.git
-cd creda-pay_frontend
+git clone https://github.com/credy-pay/credy-pay_frontend.git
+cd credy-pay_frontend
 
 # Install dependencies
 npm install
@@ -104,7 +104,7 @@ Create a `.env.local` file from `.env.example`:
 
 ## 🏗️ Architecture
 
-Creda Pay frontend follows a **layered architecture** that cleanly separates concerns:
+Credy Pay frontend follows a **layered architecture** that cleanly separates concerns:
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -140,14 +140,14 @@ Creda Pay frontend follows a **layered architecture** that cleanly separates con
 ## 📁 Project Structure
 
 ```
-creda-pay_frontend/
+credy-pay_frontend/
 ├── .github/                    # GitHub configuration
 │   ├── ISSUE_TEMPLATE/         # Issue templates (bug, feature, task)
 │   ├── workflows/              # CI/CD GitHub Actions
 │   └── PULL_REQUEST_TEMPLATE.md
 │
 ├── public/                     # Static assets
-│   ├── creda-logo.svg          # App logo
+│   ├── credy-logo.svg          # App logo
 │   └── icons/                  # App icons & favicons
 │
 ├── src/
@@ -223,7 +223,7 @@ creda-pay_frontend/
 
 ## 🔗 Stellar Integration
 
-Creda Pay is built on the **Stellar network** using **Soroban smart contracts**.
+Credy Pay is built on the **Stellar network** using **Soroban smart contracts**.
 
 ### Wallet Connection
 
@@ -263,7 +263,7 @@ const profile = await identityService.resolve(username);
 
 ## 🤝 Contributing
 
-We love contributions! Creda Pay is an open-source project and we welcome contributors of all experience levels.
+We love contributions! Credy Pay is an open-source project and we welcome contributors of all experience levels.
 
 ### Quick Start for Contributors
 
@@ -291,7 +291,7 @@ Please read our full [Contributing Guide](CONTRIBUTING.md) and [Code of Conduct]
 
 ## 📄 License
 
-Creda Pay is open source under the [MIT License](LICENSE).
+Credy Pay is open source under the [MIT License](LICENSE).
 
 ---
 

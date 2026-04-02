@@ -24,12 +24,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Creda Pay | Open Trust Layer for Digital Payments',
+  title: 'Credy Pay | Open Trust Layer for Digital Payments',
   description: 'Transform your wallet into a portable financial reputation. Built on Stellar network.',
   keywords: 'Stellar, Soroban, Blockchain, Payments, Trust, Decentralized Identity, Credibility',
-  authors: [{ name: 'Creda Pay Contributors' }],
+  authors: [{ name: 'Credy Pay Contributors' }],
   openGraph: {
-    title: 'Creda Pay | Open Trust Layer',
+    title: 'Credy Pay | Open Trust Layer',
     description: 'Transform your wallet into a portable financial reputation.',
     type: 'website',
   },
@@ -57,7 +57,7 @@ export default function RootLayout({
                       <div className="w-12 h-12 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg transform rotate-6">
                         <span className="text-white text-2xl font-black italic tracking-tighter">C</span>
                       </div>
-                      <span className="text-3xl font-black tracking-tightest">Creda Pay</span>
+                      <span className="text-3xl font-black tracking-tightest">Credy Pay</span>
                     </div>
                     <p className="text-slate-400 text-lg leading-relaxed mb-10">
                       The open trust layer for digital finance. Building portable reputation from participation, not permission.
@@ -92,7 +92,7 @@ export default function RootLayout({
                   </div>
                 </div>
                 <div className="mt-20 pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
-                  <p className="text-slate-500 font-bold text-sm">© 2025 Creda Pay. MIT Licensed.</p>
+                  <p className="text-slate-500 font-bold text-sm">© 2025 Credy Pay. MIT Licensed.</p>
                   <div className="flex gap-8 text-sm font-bold text-slate-500">
                     <span className="hover:text-slate-300 transition cursor-pointer">Terms</span>
                     <span className="hover:text-slate-300 transition cursor-pointer">Privacy</span>

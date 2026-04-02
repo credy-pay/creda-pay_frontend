@@ -1,6 +1,6 @@
 # Stellar & Soroban Integration Guide
 
-This guide describes how to work with the Stellar network and Soroban smart contracts within the Creda Pay repository.
+This guide describes how to work with the Stellar network and Soroban smart contracts within the Credy Pay repository.
 
 ## 🛠️ Tools Used
 -   `@stellar/stellar-sdk`: Primary library for building transactions and interacting with the network.

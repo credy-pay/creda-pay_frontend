@@ -16,7 +16,7 @@ export function Navbar() {
                     <div className="w-10 h-10 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all rotate-3 group-hover:rotate-0">
                         <span className="text-white text-xl font-bold tracking-tighter italic">C</span>
                     </div>
-                    <span className="text-xl font-black tracking-tight text-slate-900 group-hover:text-blue-600 transition">Creda Pay</span>
+                    <span className="text-xl font-black tracking-tight text-slate-900 group-hover:text-blue-600 transition">Credy Pay</span>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-1 font-medium text-slate-600">

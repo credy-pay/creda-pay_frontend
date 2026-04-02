@@ -1,8 +1,8 @@
-# Contributing to Creda Pay
+# Contributing to Credy Pay
 
-First off, thank you for considering contributing to Creda Pay!
+First off, thank you for considering contributing to Credy Pay!
 
-Creda Pay is an open-source protocol building a trust layer for digital payments on Stellar. Every contribution — whether it's code, documentation, design, or bug reports — helps us move closer to a more trustworthy digital payment ecosystem.
+Credy Pay is an open-source protocol building a trust layer for digital payments on Stellar. Every contribution — whether it's code, documentation, design, or bug reports — helps us move closer to a more trustworthy digital payment ecosystem.
 
 ---
 
@@ -25,7 +25,7 @@ Creda Pay is an open-source protocol building a trust layer for digital payments
 
 ## Code of Conduct
 
-This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [conduct@credapay.org](mailto:conduct@credapay.org).
+This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [conduct@credypay.org](mailto:conduct@credypay.org).
 
 ---
 
@@ -98,11 +98,11 @@ We welcome design contributions:
 # 1. Fork the repository on GitHub
 
 # 2. Clone your fork
-git clone https://github.com/<your-username>/creda-pay_frontend.git
-cd creda-pay_frontend
+git clone https://github.com/<your-username>/credy-pay_frontend.git
+cd credy-pay_frontend
 
 # 3. Add upstream remote
-git remote add upstream https://github.com/creda-pay/creda-pay_frontend.git
+git remote add upstream https://github.com/credy-pay/credy-pay_frontend.git
 
 # 4. Install dependencies
 npm install

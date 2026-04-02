@@ -24,7 +24,7 @@ export default function Home() {
         </h1>
 
         <p className="max-w-3xl text-xl md:text-3xl font-bold text-slate-500 leading-relaxed md:leading-snug mb-16 px-4 md:px-0">
-          Creda Pay is the open trust layer for digital payments. Transform your Stellar wallet into a portable financial identity that grows with every interaction.
+          Credy Pay is the open trust layer for digital payments. Transform your Stellar wallet into a portable financial identity that grows with every interaction.
         </p>
 
         <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto px-6 md:px-0">
@@ -70,7 +70,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-1 mb-10">
                   <div className="text-slate-400 text-sm font-bold tracking-wide">Identity</div>
-                  <div className="text-white text-3xl font-black tracking-tightest">alex_stellar.creda</div>
+                  <div className="text-white text-3xl font-black tracking-tightest">alex_stellar.credy</div>
                 </div>
                 <div className="grid grid-cols-2 gap-6 mb-10">
                   <div>
@@ -99,7 +99,7 @@ export default function Home() {
       <section className="mt-40 max-w-7xl mx-auto px-8 w-full">
         <div className="text-center mb-24 max-w-3xl mx-auto space-y-6">
           <h2 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tightest leading-none">Built for the <br /><span className="text-gradient">Next Economy.</span></h2>
-          <p className="text-xl font-bold text-slate-500">Creda Pay transforms anonymous Stellar addresses into trust-bearing financial profiles.</p>
+          <p className="text-xl font-bold text-slate-500">Credy Pay transforms anonymous Stellar addresses into trust-bearing financial profiles.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -140,7 +140,7 @@ export default function Home() {
             Digital finance solved value transfer. <br />
             It did <span className="text-blue-600">not</span> solve trust.
           </blockquote>
-          <p className="text-sm font-black text-blue-600 uppercase tracking-widest pt-8">— The Creda Pay Philosophy</p>
+          <p className="text-sm font-black text-blue-600 uppercase tracking-widest pt-8">— The Credy Pay Philosophy</p>
         </div>
       </section>
 

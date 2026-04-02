@@ -1,6 +1,6 @@
-# Creda Pay Design System
+# Credy Pay Design System
 
-This document outlines the visual standards and design tokens for the Creda Pay project. All contributors should adhere to these guidelines to ensure a consistent, premium experience across the platform.
+This document outlines the visual standards and design tokens for the Credy Pay project. All contributors should adhere to these guidelines to ensure a consistent, premium experience across the platform.
 
 ## 🎨 Color Palette
 
@@ -68,7 +68,7 @@ Used for navigation bars and overlays. Use the `.glass` utility class.
 
 ## 🌑 Dark Mode
 
-Creda Pay supports native dark mode via the `[data-theme='dark']` attribute on the `html` element. 
+Credy Pay supports native dark mode via the `[data-theme='dark']` attribute on the `html` element. 
 
 -   Avoid using hardcoded hex values in components.
 -   Always use CSS variables (e.g., `color: var(--foreground)`).
