@@ -1,6 +1,6 @@
 # Contributing to Creda Pay
 
-First off, thank you for considering contributing to Creda Pay! 🎉
+First off, thank you for considering contributing to Creda Pay!
 
 Creda Pay is an open-source protocol building a trust layer for digital payments on Stellar. Every contribution — whether it's code, documentation, design, or bug reports — helps us move closer to a more trustworthy digital payment ecosystem.
 
@@ -15,6 +15,7 @@ Creda Pay is an open-source protocol building a trust layer for digital payments
 - [Development Workflow](#development-workflow)
 - [Coding Standards](#coding-standards)
 - [Commit Convention](#commit-convention)
+- [Design System](#design-system)
 - [Pull Request Process](#pull-request-process)
 - [Issue Guidelines](#issue-guidelines)
 - [Stellar-Specific Guidelines](#stellar-specific-guidelines)
@@ -253,12 +254,13 @@ export function TrustBadge({ score, size = 'md' }: TrustBadgeProps) {
 }
 ```
 
-### CSS
+### Design System
 
-- Use **CSS custom properties** (variables) for theming
-- Follow **BEM naming** for class names
-- Keep global styles in `src/app/globals.css`
-- Component-specific styles use CSS Modules (`.module.css`)
+To maintain a consistent premium look, please refer to our [Design System](docs/DESIGN_SYSTEM.md) before building new UI components. 
+
+- Use **CSS Custom Properties** (variables) for colors.
+- Follow the typography hierarchy (Outfit for headings, Inter for body).
+- Utilize existing utility classes (`.card`, `.glass`, `.btn-primary`).
 
 ### File Naming
 
